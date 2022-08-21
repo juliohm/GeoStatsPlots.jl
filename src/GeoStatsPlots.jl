@@ -2,6 +2,7 @@ module GeoStatsPlots
 
 using GeoStatsBase
 using Variography
+using RecipesBase
 using StatsBase
 using Distances
 using Meshes
