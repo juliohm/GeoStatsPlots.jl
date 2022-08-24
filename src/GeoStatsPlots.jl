@@ -1,11 +1,15 @@
 module GeoStatsPlots
 
+using Meshes
 using GeoStatsBase
 using Variography
-using RecipesBase
+
 using LinearAlgebra: normalize
 using Distances: Euclidean, evaluate
-using Meshes
+
+using MeshPlots
+
+using RecipesBase
 
 include("geostatsbase/problems/estimation.jl")
 include("geostatsbase/problems/learning.jl")
