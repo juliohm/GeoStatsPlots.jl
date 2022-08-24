@@ -2,8 +2,8 @@
   @testset "Empirical" begin
     wl = geostatsimage("WalkerLake")
     TI = asarray(wl, :Z)[1:20,1:20]
-    d = georef((z=TI,))
-    γ = EmpiricalVariogram(d, :z, maxlag=15.0)
+    d  = georef((z=TI,))
+    γ  = EmpiricalVariogram(d, :z, maxlag=15.0)
     @test_reference "data/empirical.png" plot(γ)
   end
 
@@ -33,9 +33,9 @@
   end
 
   @testset "Varioplane" begin
-    img = readdlm(joinpath(datadir, "anisotropic.tsv"))
+    img  = readdlm(joinpath(datadir, "anisotropic.tsv"))
     data = georef((z=img,))
-    γ = EmpiricalVarioplane(data, :z, maxlag=50.0)
+    γ    = EmpiricalVarioplane(data, :z, maxlag=50.0)
 
     @test_reference "data/varioplane.png" plot(γ)
   end
