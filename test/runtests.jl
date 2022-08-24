@@ -20,6 +20,6 @@ ENV["GKSwstype"] = "100"
 datadir = joinpath(@__DIR__, "data")
 
 @testset "GeoStatsPlots.jl" begin
-  include("variography.jl")
   include("geostatsbase.jl")
+  include("variography.jl")
 end
