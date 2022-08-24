@@ -3,8 +3,8 @@ module GeoStatsPlots
 using GeoStatsBase
 using Variography
 using RecipesBase
-using StatsBase
-using Distances
+using LinearAlgebra: normalize
+using Distances: Euclidean, evaluate
 using Meshes
 
 include("geostatsbase/problems/estimation.jl")

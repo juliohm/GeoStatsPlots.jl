@@ -6,9 +6,9 @@ version = "0.1.0"
 [deps]
 Distances = "b4f34e82-e78d-54a5-968a-f98e89d6e8f7"
 GeoStatsBase = "323cb8eb-fbf6-51c0-afd0-f8fba70507b2"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 Meshes = "eacbb407-ea5a-433e-ab97-5258b1ca43fa"
 RecipesBase = "3cdcf5f2-1ef4-517c-9805-6587b60abb01"
-StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 Variography = "04a0146e-e6df-5636-8d7f-62fa9eb0b20c"
 
 [compat]
@@ -16,6 +16,5 @@ Distances = "0.10"
 GeoStatsBase = "0.26.2"
 Meshes = "0.22, 0.23"
 RecipesBase = "1"
-StatsBase = "0.32, 0.33"
 Variography = "0.14.7"
 julia = "1.6"
