@@ -30,6 +30,8 @@
 
     plt = plot(plt1, plt2, size=(600, 800), layout=(2, 1))
     @test_reference "data/theoretical.png" plt
+
+    @test_reference "data/nugget.png" plot(NuggetEffect(0.1),ylim=(0,1))
   end
 
   @testset "Varioplane" begin
