@@ -17,8 +17,8 @@
   𝒟₂ = view(sdata, locs₂)
   X₁ = [coordinates(centroid(𝒟₁, i)) for i in 1:nelements(𝒟₁)]
   X₂ = [coordinates(centroid(𝒟₂, i)) for i in 1:nelements(𝒟₂)]
-  z₁ = 𝒟₁[var₁]
-  z₂ = 𝒟₂[var₂]
+  z₁ = getproperty(𝒟₁, var₁)
+  z₂ = getproperty(𝒟₂, var₂)
 
   # compute pairwise distance
   m, n = length(z₁), length(z₂)
