@@ -11,14 +11,16 @@
   var₂ = length(hs.args) == 3 ? hs.args[3] : var₁
 
   # lookup valid data
-  locs₁ = findall(!ismissing, sdata[var₁])
-  locs₂ = findall(!ismissing, sdata[var₂])
-  𝒟₁ = view(sdata, locs₁)
-  𝒟₂ = view(sdata, locs₂)
-  X₁ = [coordinates(centroid(𝒟₁, i)) for i in 1:nelements(𝒟₁)]
-  X₂ = [coordinates(centroid(𝒟₂, i)) for i in 1:nelements(𝒟₂)]
-  z₁ = getproperty(𝒟₁, var₁)
-  z₂ = getproperty(𝒟₂, var₂)
+  locs₁ = findall(!ismissing, sdata[:,var₁])
+  locs₂ = findall(!ismissing, sdata[:,var₂])
+  𝒮₁ = view(sdata, locs₁)
+  𝒮₂ = view(sdata, locs₂)
+  𝒟₁ = domain(𝒮₁)
+  𝒟₂ = domain(𝒮₂)
+  X₁ = coordinates.(centroid.(𝒟₁))
+  X₂ = coordinates.(centroid.(𝒟₂))
+  z₁ = 𝒮₁[:,var₁]
+  z₂ = 𝒮₂[:,var₂]
 
   # compute pairwise distance
   m, n = length(z₁), length(z₂)
