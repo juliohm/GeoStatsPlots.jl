@@ -18,9 +18,8 @@
       sdata = georef((x=rand(rng, 10), y=rand(rng, 10), z=rand(rng, 10)), 10rand(rng, 2, 10))
       tdata = georef((x=rand(rng, 10, 10),))
       rtask = RegressionTask(:x, :y)
-      ctask = ClusteringTask(:x, :c)
 
-      problem = LearningProblem(sdata, tdata, ctask)
+      problem = LearningProblem(sdata, tdata, rtask)
       @test_reference "data/learning.png" plot(problem, ms=2)
     end
   end
