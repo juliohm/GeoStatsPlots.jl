@@ -1,7 +1,7 @@
 name = "GeoStatsPlots"
 uuid = "cf22561b-6452-4701-9483-6c69015d00e1"
 authors = ["Elias Carvalho <eliascarvdev@gmail.com> and contributors"]
-version = "0.1.6"
+version = "0.1.7"
 
 [deps]
 Distances = "b4f34e82-e78d-54a5-968a-f98e89d6e8f7"
@@ -14,9 +14,9 @@ Variography = "04a0146e-e6df-5636-8d7f-62fa9eb0b20c"
 
 [compat]
 Distances = "0.10"
-GeoStatsBase = "0.30"
+GeoStatsBase = "0.30, 0.31"
 MeshPlots = "0.1"
-Meshes = "0.27, 0.28"
+Meshes = "0.27, 0.28, 0.29"
 RecipesBase = "1"
 Variography = "0.15"
 julia = "1.6"
